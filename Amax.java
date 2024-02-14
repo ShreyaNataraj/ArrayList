@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-public class AList{
+
+public class Amax {
   public static void main(String[] args) {
     ArrayList<Integer>list = new ArrayList<>();
     list.add(1);
@@ -7,10 +8,13 @@ public class AList{
     list.add(3);
     list.add(4);
     list.add(5);
-    System.out.println(list.remove(2));
-    System.out.println(list.set(2,6));
-    System.out.println(list);
-    System.out.println(list.size());
-  }
+    int max = Integer.MIN_VALUE;
+    for(int i = 0; i<list.size();i++){
+      if(max<list.get(i)){
+        max = list.get(i);
+      }
+    }
+    System.out.println(max);
 
+  }
 }
